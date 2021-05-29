@@ -1,5 +1,7 @@
 <template>
- <Header :totalIncome="state.totalIncome" />
+  <div>
+    <Header :totalIncome="state.totalIncome" />    
+  </div>
 </template>
 
 <script>
@@ -23,6 +25,9 @@ export default {
       Header,
       state
     }
+  },
+  components: {
+    Header
   }
 }
 </script>
