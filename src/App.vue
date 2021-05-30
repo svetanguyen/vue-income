@@ -1,12 +1,14 @@
 <template>
     <Header :totalIncome="state.totalIncome" />    
     <Form @add-income="AddIncome" />
+    <IncomeList :state="state" />
 </template>
 
 <script>
 import {reactive, computed} from 'vue';
 import Header from './components/Header.vue';
 import Form from './components/Form';
+import IncomeList from './components/IncomeList';
 export default {
   setup() {
     const state = reactive({
@@ -39,12 +41,14 @@ export default {
       Header,
       Form,
       state,
-      AddIncome
+      AddIncome,
+      IncomeList
     }
   },
   components: {
     Header,
-    Form
+    Form,
+    IncomeList
   }
 }
 </script>
